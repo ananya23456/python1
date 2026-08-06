@@ -1,0 +1,222 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import numpy as np
+a=np.array([[1,2],[6,3]])
+b=np.array([[3,4],[7,8]])
+print("Add",a+b)
+print("Sub",a-b)
+print("mult",a*b)
+print("Orginal mult",np.dot(a,b))
+print("Transpose",np.transpose(a))
+
+
+# In[2]:
+
+
+import numpy as np
+X=np.array([[1,2,3],[4,5,6],[7,8,9]])
+U,S,VT=np.linalg.svd(X)
+n_component=2
+X_reconstructed=np.dot(U[:,:n_component],np.dot(np.diag(S[:n_component]),VT[:n_component,:]))
+print("original matrix:")
+print(X)
+print("\nReconsructed matrix(with reduced dimension):")
+print(X_reconstructed)
+
+
+# In[7]:
+
+
+import matplotlib.pyplot as plt
+x=[3,5,6,8,9]
+y=[7,8,9,4,3]
+plt.plot(x,y)
+plt.title("Graph")
+plt.xlabel("x_axis")
+plt.ylabel("y_axis")
+
+
+# In[3]:
+
+
+import matplotlib.pyplot as plt
+subject=["Maths","English","Malayalam"]
+mark=[69,70,30]
+plt.bar(subject,mark)
+plt.title("mark chart")
+plt.xlabel("Mark")
+plt.ylabel("Subject")
+
+
+# In[11]:
+
+
+import matplotlib.pyplot as plt
+subject=["Maths","English","Malayalam"]
+mark=[69,70,30]
+plt.scatter(subject,mark)
+plt.title("mark chart")
+plt.xlabel("Mark")
+plt.ylabel("Subject")
+
+
+# In[23]:
+
+
+import matplotlib.pyplot as plt
+subject=["Maths","English","Malayalam"]
+mark=[10,10,20,20,30,30,40,40]
+plt.hist(mark)
+
+plt.title("mark chart")
+plt.xlabel("Mark")
+plt.ylabel("Subject")
+
+
+# In[22]:
+
+
+import matplotlib.pyplot as plt
+subject=["Maths","English","Malayalam"]
+mark=[10,10,20,20,30,30,40,40]
+plt.hist(mark)
+plt.legend("profit")
+plt.title("mark chart")
+plt.xlabel("Mark")
+plt.ylabel("Subject")
+
+
+# In[35]:
+
+
+import matplotlib.pyplot as plt
+mark=[10,55,33,45,77,4,23,67]
+plt.pie(mark)
+plt.title("mark chart")
+
+
+# In[34]:
+
+
+import matplotlib.pyplot as plt
+mark=[10,55,33,45,77,4,23,67]
+plt.pie(mark)
+plt.legend("profit")
+plt.title("mark chart")
+
+
+# In[37]:
+
+
+import matplotlib.pyplot as plt
+x=[1,2,6,18]
+y=[3,10,12,20]
+plt.plot(x,y,"r:o")
+plt.title("Graph")
+plt.xlabel("x_axis")
+plt.ylabel("y_axis")
+
+
+# In[38]:
+
+
+import matplotlib.pyplot as plt
+x=np.array([0,1,2,3])
+y=np.array([3,8,1,10])
+plt.subplot(1,2,1)
+plt.plot(x,y)
+
+
+# In[43]:
+
+
+import matplotlib.pyplot as plt
+x=np.array([0,1,2,3])
+y=np.array([3,8,1,10])
+plt.subplot(1,2,1)
+plt.plot(x,y)
+a=np.array([4,5,6,7])
+b=np.array([5,8,11,7])
+plt.subplot(1,2,2)
+plt.plot(a,b)
+
+
+# In[20]:
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+Men=[22,30,35,35,26]
+Women=[25,32,30,35,29]
+groups=[1,2,3,4,5]
+groups=np.arange(5)
+
+plt.bar(groups,Men,0.3)
+plt.bar(groups+0.3,Women,0.3)
+plt.title(" Scores by group and gender")
+plt.xlabel("group")
+plt.ylabel("Scores")
+plt.legend("mv")
+
+
+# In[10]:
+
+
+import matplotlib.pyplot as plt
+x=[3,5,6,8,9]
+y=[7,8,9,4,3]
+a=[6,2,7,5,2]
+z=[3,5,7,8,9]
+
+plt.plot(x,y,a,z)
+plt.legend("line")
+plt.title("Graph")
+plt.xlabel("x_axis")
+plt.ylabel("y_axis")
+
+
+# In[24]:
+
+
+import matplotlib.pyplot as plt
+Language=["Java","Python","php","javascript","C#","C++"]
+Popularity=[22.2,17.6,8.8,8,7.7,6.7]
+plt.scatter(Language,Popularity)
+plt.pie(Popularity,labels=Language,autopct="%1.f%%")
+plt.title("mark chart")
+
+
+# In[12]:
+
+
+import matplotlib.pyplot as plt
+Language=["Java","Python","php","javascript","C#","C++"]
+Popularity=[22.2,17.6,8.8,8,7.7,6.7]
+plt.scatter(Language,Popularity)
+plt.title("mark chart")
+
+
+# In[15]:
+
+
+import matplotlib.pyplot as plt
+Language=["Java","Python","php","javascript","C#","C++"]
+Popularity=[22.2,17.6,8.8,8,7.7,6.7]
+plt.bar(Language,Popularity)
+plt.grid(True)
+plt.legend("profit")
+plt.title("mark chart")
+plt.xlabel("x_axis")
+plt.ylabel("y_axis")
+
+
+# In[ ]:
+
+
+
+
